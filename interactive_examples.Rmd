@@ -13,3 +13,41 @@ We will practice creating interactive graphs and tables using built in datasets 
 
 - INTERACTIVE PLOTS: PLOTLY
 - INTERACTIVE TABLES : DT
+
+```{r, include=FALSE}
+
+#attach file
+library(tidyverse)
+library(DT)
+library(plotly)
+
+
+```
+
+### A. Interactive grap of iris dimensions
+
+Using Edgar Anderson's famous 'iris' dataset
+
+
+```{r, echoa = FALSE}
+
+# eval=FALSE
+
+iris_graph <- ggplot(data = iris, aes (x=Petal.Width, y= Petal.Length))+
+  geom_point(aes(size=Sepal.Width,
+             color=Species),
+             alpha=0.5)+
+  theme_minimal()+
+  
+             labs(title="My iris")
+
+iris_graph
+
+
+# the static version should work first
+
+ggplotly(iris_graph)
+
+
+```
+
