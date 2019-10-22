@@ -51,3 +51,14 @@ ggplotly(iris_graph)
 
 ```
 
+We are going to use msleep: name and information and sleep of different species
+
+```{r}
+
+### make an interactive with DT
+
+datatable(msleep)
+
+
+```
+
